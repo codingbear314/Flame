@@ -103,7 +103,9 @@ def Negamax(EndingLetter, depth, alpha, beta):
     for word in DB:
         if word in History:
             continue
+        History.add(word)
         Calculated = -Negamax(word[-1], depth-1, -beta, -alpha)[0]
+        History.remove(word)
         if Calculated > bestValue:
             bestValue = Calculated
             bestMove = word

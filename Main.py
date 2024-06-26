@@ -36,9 +36,9 @@ while True:
         if WordEntered in ['기권', 'resign', 'give up', 'exit', 'quit', 'stop']:
             print("인간 기권, AI 승리")
             exit()
-        if not IsInDatabase(WordEntered):
-            print("Enter a valid word!")
-            continue
+        # if not IsInDatabase(WordEntered):
+        #    print("Enter a valid word!")
+        #    continue
         if WordEntered[0] not in TwoSounds(LastWord[-1]):
             print("Enter a word starting with {}".format(LastWord[-1]))
             continue
